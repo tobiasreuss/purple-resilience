@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy – Purple Resilience</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --color-primary: #5B3A8C;
+            --color-primary-light: #7254A3;
+            --color-secondary: #2DBDB6;
+            --color-accent: #8B5CC2;
+            --color-background: #fafaf8;
+            --color-surface: #ffffff;
+            --color-text: #1a1a1a;
+            --color-text-muted: #5a5a5a;
+            --color-border: #e0e0dc;
+            --spacing-unit: 8px;
+            --max-width: 1120px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'IBM Plex Sans', -apple-system, system-ui, sans-serif;
+            font-size: 17px;
+            line-height: 1.6;
+            color: var(--color-text);
+            background: var(--color-background);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 calc(var(--spacing-unit) * 3);
+        }
+
+        header {
+            background: var(--color-surface);
+            border-bottom: 1px solid var(--color-border);
+            padding: calc(var(--spacing-unit) * 2.5) 0;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 20px;
+            font-weight: 500;
+            color: var(--color-primary);
+            text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+
+        nav a {
+            color: var(--color-text);
+            text-decoration: none;
+            margin-left: calc(var(--spacing-unit) * 4);
+            font-size: 15px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: var(--color-primary);
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: calc(var(--spacing-unit) * 8) calc(var(--spacing-unit) * 3);
+        }
+
+        h1 {
+            font-size: 42px;
+            font-weight: 600;
+            line-height: 1.2;
+            color: var(--color-text);
+            margin-bottom: calc(var(--spacing-unit) * 2);
+            letter-spacing: -0.02em;
+        }
+
+        .last-updated {
+            font-size: 15px;
+            color: var(--color-text-muted);
+            margin-bottom: calc(var(--spacing-unit) * 6);
+        }
+
+        h2 {
+            font-size: 26px;
+            font-weight: 600;
+            line-height: 1.3;
+            color: var(--color-text);
+            margin-top: calc(var(--spacing-unit) * 6);
+            margin-bottom: calc(var(--spacing-unit) * 2);
+        }
+
+        h3 {
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 1.3;
+            color: var(--color-text);
+            margin-top: calc(var(--spacing-unit) * 4);
+            margin-bottom: calc(var(--spacing-unit) * 1.5);
+        }
+
+        p {
+            margin-bottom: calc(var(--spacing-unit) * 2.5);
+            line-height: 1.7;
+        }
+
+        ul {
+            margin-bottom: calc(var(--spacing-unit) * 2.5);
+            padding-left: calc(var(--spacing-unit) * 3);
+        }
+
+        li {
+            margin-bottom: calc(var(--spacing-unit) * 1);
+            line-height: 1.7;
+        }
+
+        strong {
+            font-weight: 600;
+            color: var(--color-text);
+        }
+
+        a {
+            color: var(--color-primary);
+            text-decoration: underline;
+        }
+
+        a:hover {
+            color: var(--color-primary-light);
+        }
+
+        .placeholder {
+            background: rgba(45, 189, 182, 0.1);
+            border-left: 3px solid var(--color-secondary);
+            padding: calc(var(--spacing-unit) * 2);
+            margin: calc(var(--spacing-unit) * 2) 0;
+            font-size: 15px;
+            color: var(--color-text-muted);
+            font-style: italic;
+        }
+
+        footer {
+            background: var(--color-surface);
+            border-top: 1px solid var(--color-border);
+            padding: calc(var(--spacing-unit) * 6) 0;
+            margin-top: calc(var(--spacing-unit) * 10);
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: calc(var(--spacing-unit) * 3);
+        }
+
+        .footer-logo {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 18px;
+            font-weight: 500;
+            color: var(--color-primary);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: calc(var(--spacing-unit) * 4);
+        }
+
+        .footer-links a {
+            color: var(--color-text-muted);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--color-primary);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 32px;
+            }
+
+            h2 {
+                font-size: 22px;
+            }
+
+            nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">Purple Resilience</a>
+                <nav>
+                    <a href="index.html">Home</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <h1>Privacy Policy</h1>
+        <p class="last-updated">Last updated: February 2025</p>
+
+        <p>Purple Resilience ("we", "us", "our") is committed to protecting your personal data and respecting your privacy rights. This Privacy Policy explains how we collect, use, process, and protect your personal information in accordance with the General Data Protection Regulation (GDPR) and other applicable data protection laws.</p>
+
+        <h2>1. Data Controller</h2>
+        
+        <p>The data controller responsible for your personal data is:</p>
+
+        <p>
+            <strong>Purple Resilience (in formation)</strong><br>
+            Berlin, Germany<br>
+            Email: <a href="mailto:tobias.reuss@purple-resilience.eu">tobias.reuss@purple-resilience.eu</a>
+        </p>
+
+        <div class="placeholder">
+            [Note: Full legal entity details including registered address will be added following company incorporation.]
+        </div>
+
+        <p>You can contact us at the email address above for any privacy-related questions.</p>
+
+        <h2>2. What Personal Data We Collect</h2>
+
+        <p>We collect and process the following categories of personal data:</p>
+
+        <h3>2.1 Contact Form Data</h3>
+        <p>When you submit our contact form or request information, we collect:</p>
+        <ul>
+            <li>Name</li>
+            <li>Company/Organization name</li>
+            <li>Role/Department</li>
+            <li>Email address</li>
+            <li>Message content</li>
+        </ul>
+
+        <h3>2.2 Website Usage Data</h3>
+        <p>When you visit our website, we may automatically collect certain technical information:</p>
+        <ul>
+            <li>IP address</li>
+            <li>Browser type and version</li>
+            <li>Operating system</li>
+            <li>Referring website</li>
+            <li>Pages visited and time spent</li>
+            <li>Date and time of access</li>
+        </ul>
+
+        <h3>2.3 Cookies and Tracking Technologies</h3>
+        <p>We may use cookies and similar tracking technologies to enhance your experience on our website. You can control cookie preferences through your browser settings.</p>
+
+        <div class="placeholder">
+            [PLACEHOLDER: Update with specific cookies used once website analytics are implemented. Consider cookie consent banner requirements if using non-essential cookies.]
+        </div>
+
+        <h2>3. Legal Basis for Processing</h2>
+
+        <p>We process your personal data based on the following legal grounds under GDPR Article 6(1):</p>
+
+        <ul>
+            <li><strong>Consent (Art. 6(1)(a)):</strong> When you submit the contact form or subscribe to communications, you provide explicit consent for us to process your data.</li>
+            <li><strong>Legitimate interests (Art. 6(1)(f)):</strong> We process certain data based on our legitimate business interests, such as improving our website and services, provided this does not override your rights and freedoms.</li>
+            <li><strong>Contract performance (Art. 6(1)(b)):</strong> Where we enter into pilot agreements or service contracts, processing is necessary to fulfill our contractual obligations.</li>
+        </ul>
+
+        <h2>4. How We Use Your Personal Data</h2>
+
+        <p>We use your personal data for the following purposes:</p>
+
+        <ul>
+            <li>Responding to your inquiries and contact requests</li>
+            <li>Conducting pilot projects and providing our services</li>
+            <li>Communicating with you about Purple Resilience products and services</li>
+            <li>Analyzing and improving our website and services</li>
+            <li>Complying with legal obligations</li>
+            <li>Protecting our rights and preventing fraud</li>
+        </ul>
+
+        <h2>5. Data Sharing and Disclosure</h2>
+
+        <p>We do not sell your personal data. We may share your information with:</p>
+
+        <h3>5.1 Service Providers</h3>
+        <p>We engage third-party service providers who process data on our behalf, including:</p>
+        <ul>
+            <li>Website hosting providers</li>
+            <li>Email service providers</li>
+            <li>Analytics providers</li>
+        </ul>
+
+        <div class="placeholder">
+            [PLACEHOLDER: Update with specific service providers once finalized. Examples: Netlify for hosting, email service provider, analytics provider, etc.]
+        </div>
+
+        <p>All service providers are contractually bound to protect your data and process it only according to our instructions.</p>
+
+        <h3>5.2 Legal Requirements</h3>
+        <p>We may disclose your personal data if required by law, court order, or governmental regulation, or if necessary to protect our rights or the safety of others.</p>
+
+        <h2>6. International Data Transfers</h2>
+
+        <p>Your personal data may be transferred to and processed in countries outside the European Economic Area (EEA). When this occurs, we ensure appropriate safeguards are in place, such as:</p>
+        <ul>
+            <li>Standard Contractual Clauses approved by the European Commission</li>
+            <li>Adequacy decisions confirming adequate data protection in the recipient country</li>
+            <li>Other legally recognized transfer mechanisms</li>
+        </ul>
+
+        <h2>7. Data Retention</h2>
+
+        <p>We retain your personal data only for as long as necessary to fulfill the purposes outlined in this Privacy Policy, unless a longer retention period is required by law.</p>
+
+        <ul>
+            <li><strong>Contact form data:</strong> Retained for up to 3 years or until you request deletion</li>
+            <li><strong>Website usage data:</strong> Retained for up to 12 months</li>
+            <li><strong>Customer/pilot project data:</strong> Retained for the duration of the relationship plus any legally required retention period</li>
+        </ul>
+
+        <h2>8. Your Rights Under GDPR</h2>
+
+        <p>You have the following rights regarding your personal data:</p>
+
+        <ul>
+            <li><strong>Right of access (Art. 15):</strong> Request a copy of the personal data we hold about you</li>
+            <li><strong>Right to rectification (Art. 16):</strong> Request correction of inaccurate or incomplete data</li>
+            <li><strong>Right to erasure (Art. 17):</strong> Request deletion of your personal data ("right to be forgotten")</li>
+            <li><strong>Right to restriction (Art. 18):</strong> Request limitation of processing in certain circumstances</li>
+            <li><strong>Right to data portability (Art. 20):</strong> Receive your data in a structured, machine-readable format</li>
+            <li><strong>Right to object (Art. 21):</strong> Object to processing based on legitimate interests or for direct marketing</li>
+            <li><strong>Right to withdraw consent (Art. 7(3)):</strong> Withdraw consent at any time where processing is based on consent</li>
+        </ul>
+
+        <p>To exercise any of these rights, please contact us at <strong>tobias.reuss@purple-resilience.eu</strong>. We will respond to your request within one month.</p>
+
+        <h2>9. Right to Lodge a Complaint</h2>
+
+        <p>If you believe we have not handled your personal data in accordance with GDPR, you have the right to lodge a complaint with a supervisory authority. In Germany, the relevant authority is:</p>
+
+        <p>
+            <strong>Die Bundesbeauftragte für den Datenschutz und die Informationsfreiheit (BfDI)</strong><br>
+            Graurheindorfer Str. 153<br>
+            53117 Bonn, Germany<br>
+            Website: <a href="https://www.bfdi.bund.de" target="_blank">www.bfdi.bund.de</a>
+        </p>
+
+        <h2>10. Data Security</h2>
+
+        <p>We implement appropriate technical and organizational measures to protect your personal data against unauthorized access, alteration, disclosure, or destruction. These measures include:</p>
+        <ul>
+            <li>Encryption of data in transit and at rest</li>
+            <li>Access controls and authentication</li>
+            <li>Regular security assessments</li>
+            <li>Staff training on data protection</li>
+        </ul>
+
+        <p>However, no method of transmission over the internet or electronic storage is 100% secure. While we strive to protect your personal data, we cannot guarantee absolute security.</p>
+
+        <h2>11. Children's Privacy</h2>
+
+        <p>Our website and services are not directed to individuals under the age of 16. We do not knowingly collect personal data from children. If you become aware that a child has provided us with personal data, please contact us so we can delete such information.</p>
+
+        <h2>12. Changes to This Privacy Policy</h2>
+
+        <p>We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements. We will notify you of any material changes by posting the updated policy on our website and updating the "Last updated" date. We encourage you to review this Privacy Policy periodically.</p>
+
+        <h2>13. Contact Us</h2>
+
+        <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us:</p>
+
+        <p>
+            <strong>Email:</strong> <a href="mailto:tobias.reuss@purple-resilience.eu">tobias.reuss@purple-resilience.eu</a><br>
+            <strong>Subject line:</strong> Privacy Inquiry
+        </p>
+
+        <div class="placeholder">
+            [PLACEHOLDER: Update with full postal address and designated Data Protection Officer contact information once company is incorporated and DPO is appointed (if required based on processing activities).]
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Purple Resilience</div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="imprint.html">Imprint</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
