@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purple Resilience – Climate Risk & Adaptation Insights</title>
+    <meta name="description" content="Purple Resilience provides climate risk intelligence for energy networks. Help grid operators prioritize vegetation management, wildfire preparedness, and asset protection with weather-driven insights.">
+    <meta property="og:title" content="Purple Resilience – Climate Risk & Adaptation Insights">
+    <meta property="og:description" content="Climate risk intelligence for energy networks. Help grid operators prioritize vegetation management, wildfire preparedness, and asset protection with weather-driven insights.">
+    <meta property="og:type" content="website">
+    <meta name="keywords" content="grid risk management, vegetation management, wildfire risk, critical infrastructure, TSO DSO, energy network resilience, climate risk, asset management, utility risk, adaptation insights">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --color-primary: #5B3A8C;
+            --color-primary-light: #7254A3;
+            --color-secondary: #2DBDB6;
+            --color-accent: #8B5CC2;
+            --color-background: #fafaf8;
+            --color-surface: #ffffff;
+            --color-text: #1a1a1a;
+            --color-text-muted: #5a5a5a;
+            --color-border: #e0e0dc;
+            --spacing-unit: 8px;
+            --max-width: 1120px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'IBM Plex Sans', -apple-system, system-ui, sans-serif;
+            font-size: 17px;
+            line-height: 1.6;
+            color: var(--color-text);
+            background: var(--color-background);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 calc(var(--spacing-unit) * 3);
+        }
+
+        /* Header */
+        header {
+            background: var(--color-surface);
+            border-bottom: 1px solid var(--color-border);
+            padding: calc(var(--spacing-unit) * 2.5) 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 20px;
+            font-weight: 500;
+            color: var(--color-primary);
+            text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+
+        nav a {
+            color: var(--color-text);
+            text-decoration: none;
+            margin-left: calc(var(--spacing-unit) * 4);
+            font-size: 15px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: var(--color-primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: calc(var(--spacing-unit) * 8) 0 calc(var(--spacing-unit) * 6);
+            background: linear-gradient(180deg, var(--color-surface) 0%, var(--color-background) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: calc(var(--spacing-unit) * 6);
+            align-items: center;
+        }
+
+        .hero-content {
+            max-width: 580px;
+        }
+
+        .hero-image {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(91, 58, 140, 0.15);
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .status-badge {
+            display: inline-block;
+            background: rgba(91, 58, 140, 0.08);
+            color: var(--color-primary);
+            padding: calc(var(--spacing-unit) * 1) calc(var(--spacing-unit) * 2);
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 500;
+            margin-bottom: calc(var(--spacing-unit) * 3);
+            border: 1px solid rgba(91, 58, 140, 0.12);
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: 600;
+            line-height: 1.15;
+            color: var(--color-text);
+            margin-bottom: calc(var(--spacing-unit) * 3);
+            letter-spacing: -0.03em;
+        }
+
+        .tagline {
+            font-size: 20px;
+            line-height: 1.5;
+            color: var(--color-text-muted);
+            margin-bottom: calc(var(--spacing-unit) * 5);
+        }
+
+        .cta-group {
+            display: flex;
+            gap: calc(var(--spacing-unit) * 2);
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: calc(var(--spacing-unit) * 2) calc(var(--spacing-unit) * 4);
+            font-size: 16px;
+            font-weight: 500;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.2s;
+            border: none;
+            cursor: pointer;
+            font-family: inherit;
+        }
+
+        .btn-primary {
+            background: var(--color-primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--color-primary-light);
+            transform: translateY(-1px);
+        }
+
+        /* Section Styles */
+        section {
+            padding: calc(var(--spacing-unit) * 10) 0;
+        }
+
+        section:nth-child(even) {
+            background: var(--color-surface);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: calc(var(--spacing-unit) * 8);
+            max-width: 720px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .section-label {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--color-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: calc(var(--spacing-unit) * 2);
+        }
+
+        h2 {
+            font-size: 38px;
+            font-weight: 600;
+            line-height: 1.2;
+            color: var(--color-text);
+            margin-bottom: calc(var(--spacing-unit) * 2);
+            letter-spacing: -0.02em;
+        }
+
+        h3 {
+            font-size: 22px;
+            font-weight: 600;
+            line-height: 1.3;
+            color: var(--color-text);
+            margin-bottom: calc(var(--spacing-unit) * 2);
+        }
+
+        .section-description {
+            font-size: 19px;
+            line-height: 1.6;
+            color: var(--color-text-muted);
+        }
+
+        /* Problem Section */
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: calc(var(--spacing-unit) * 4);
+            margin-top: calc(var(--spacing-unit) * 6);
+        }
+
+        .problem-card {
+            background: var(--color-background);
+            padding: calc(var(--spacing-unit) * 4);
+            border-radius: 12px;
+            border: 1px solid var(--color-border);
+        }
+
+        .problem-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(91, 58, 140, 0.08);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: calc(var(--spacing-unit) * 2.5);
+            color: var(--color-primary);
+            font-size: 24px;
+        }
+
+        .problem-card h3 {
+            font-size: 18px;
+            margin-bottom: calc(var(--spacing-unit) * 1.5);
+        }
+
+        .problem-card p {
+            font-size: 15px;
+            line-height: 1.6;
+            color: var(--color-text-muted);
+        }
+
+        /* Solution Section */
+        .solution-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: calc(var(--spacing-unit) * 5);
+            margin-top: calc(var(--spacing-unit) * 6);
+        }
+
+        .feature {
+            position: relative;
+            padding-left: calc(var(--spacing-unit) * 4);
+        }
+
+        .feature::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 4px;
+            width: 3px;
+            height: 32px;
+            background: var(--color-secondary);
+            border-radius: 2px;
+        }
+
+        .feature h3 {
+            font-size: 19px;
+            margin-bottom: calc(var(--spacing-unit) * 1.5);
+        }
+
+        .feature p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--color-text-muted);
+        }
+
+        /* Use Cases */
+        .use-cases-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: calc(var(--spacing-unit) * 3);
+            margin-top: calc(var(--spacing-unit) * 6);
+        }
+
+        .use-case {
+            background: var(--color-surface);
+            padding: calc(var(--spacing-unit) * 4);
+            border-radius: 12px;
+            border: 1px solid var(--color-border);
+            transition: all 0.3s;
+        }
+
+        .use-case:hover {
+            border-color: var(--color-primary);
+            transform: translateY(-2px);
+        }
+
+        .use-case-number {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 14px;
+            color: var(--color-secondary);
+            font-weight: 500;
+            margin-bottom: calc(var(--spacing-unit) * 1.5);
+        }
+
+        .use-case h3 {
+            font-size: 19px;
+            margin-bottom: calc(var(--spacing-unit) * 1.5);
+        }
+
+        .use-case p {
+            font-size: 15px;
+            line-height: 1.6;
+            color: var(--color-text-muted);
+        }
+
+        /* How it Works */
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: calc(var(--spacing-unit) * 5);
+            margin-top: calc(var(--spacing-unit) * 6);
+            position: relative;
+        }
+
+        .step {
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            width: 64px;
+            height: 64px;
+            background: var(--color-primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 600;
+            margin: 0 auto calc(var(--spacing-unit) * 3);
+            font-family: 'IBM Plex Mono', monospace;
+        }
+
+        .step h3 {
+            font-size: 20px;
+            margin-bottom: calc(var(--spacing-unit) * 1.5);
+        }
+
+        .step p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--color-text-muted);
+        }
+
+        /* Differentiation */
+        .diff-list {
+            max-width: 800px;
+            margin: calc(var(--spacing-unit) * 6) auto 0;
+            display: grid;
+            gap: calc(var(--spacing-unit) * 3);
+        }
+
+        .diff-item {
+            display: flex;
+            gap: calc(var(--spacing-unit) * 3);
+            align-items: flex-start;
+        }
+
+        .diff-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--color-primary);
+            color: white;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 20px;
+        }
+
+        .diff-content h4 {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--color-text);
+            margin-bottom: calc(var(--spacing-unit) * 1);
+        }
+
+        .diff-content p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--color-text-muted);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--color-surface);
+            border-top: 1px solid var(--color-border);
+            padding: calc(var(--spacing-unit) * 6) 0;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: calc(var(--spacing-unit) * 3);
+        }
+
+        .footer-logo {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 18px;
+            font-weight: 500;
+            color: var(--color-primary);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: calc(var(--spacing-unit) * 4);
+        }
+
+        .footer-links a {
+            color: var(--color-text-muted);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--color-primary);
+        }
+
+        .footer-copyright {
+            width: 100%;
+            text-align: center;
+            margin-top: calc(var(--spacing-unit) * 3);
+            padding-top: calc(var(--spacing-unit) * 3);
+            border-top: 1px solid var(--color-border);
+            color: var(--color-text-muted);
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: calc(var(--spacing-unit) * 4);
+            }
+
+            .hero-image {
+                order: -1;
+            }
+
+            h1 {
+                font-size: 38px;
+            }
+
+            h2 {
+                font-size: 30px;
+            }
+
+            .tagline {
+                font-size: 18px;
+            }
+
+            .cta-group {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+
+            nav {
+                display: none;
+            }
+
+            .problem-grid,
+            .solution-features,
+            .use-cases-grid,
+            .steps {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: calc(var(--spacing-unit) * 6) 0;
+            }
+
+            .hero {
+                padding: calc(var(--spacing-unit) * 6) 0 calc(var(--spacing-unit) * 4);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo">Purple Resilience</a>
+                <nav>
+                    <a href="#solution">Solution</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="status-badge">Seeking Design Partners</div>
+                    <h1>Climate Risk & Adaptation Insights</h1>
+                    <p class="tagline">Purple Resilience provides climate risk intelligence for energy networks, helping grid operators prioritize vegetation management, wildfire preparedness, and asset protection.</p>
+                    <div class="cta-group">
+                        <a href="contact.html" class="btn btn-primary">Talk to Us</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="hero-image.png" alt="Power transmission lines through forested landscape representing grid resilience">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="problem">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">The Challenge</div>
+                <h2>Grid operators face growing operational complexity</h2>
+                <p class="section-description">Weather volatility, vegetation risk, and limited resources create difficult prioritization decisions for network operations and asset management teams.</p>
+            </div>
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <div class="problem-icon">⚡</div>
+                    <h3>Weather Volatility</h3>
+                    <p>Increasing frequency of extreme weather events creates unpredictable operational risks for power lines, substations, and critical infrastructure.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">🌲</div>
+                    <h3>Vegetation & Wildfire Risk</h3>
+                    <p>Overgrown vegetation near power lines drives wildfire ignition risk and outage probability, but inspection resources are constrained.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">📊</div>
+                    <h3>Prioritization Challenges</h3>
+                    <p>Limited field crews and inspection budgets require precise targeting, but traditional methods lack granular, actionable risk signals.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">⏱️</div>
+                    <h3>Reactive Operations</h3>
+                    <p>Post-event triage and reactive responses dominate, when proactive risk mitigation could prevent outages and infrastructure damage.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="solution">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Our Approach</div>
+                <h2>Actionable risk intelligence for network operations</h2>
+                <p class="section-description">Purple Resilience combines environmental signals with asset context to deliver risk intelligence that integrates directly into operational workflows.</p>
+            </div>
+            <div class="solution-features">
+                <div class="feature">
+                    <h3>Risk Signals at Asset Level</h3>
+                    <p>Spatially precise risk indices for lines, substations, and network segments based on weather patterns, vegetation density, soil conditions, and historical event data.</p>
+                </div>
+                <div class="feature">
+                    <h3>Asset Context Integration</h3>
+                    <p>Connect risk signals to your specific infrastructure—voltage levels, criticality classifications, maintenance schedules, and protection systems—for relevant prioritization.</p>
+                </div>
+                <div class="feature">
+                    <h3>Workflow-Ready Outputs</h3>
+                    <p>Risk maps, inspection lists, alert thresholds, and API access enable direct integration into your planning, dispatch, and asset management systems.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="use-cases">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Applications</div>
+                <h2>Use cases for grid resilience</h2>
+            </div>
+            <div class="use-cases-grid">
+                <div class="use-case">
+                    <div class="use-case-number">01</div>
+                    <h3>Vegetation Management Prioritization</h3>
+                    <p>Identify high-risk line segments where vegetation growth, species type, and weather exposure combine to create elevated wildfire or outage risk. Focus inspection and trimming resources where they matter most.</p>
+                </div>
+                <div class="use-case">
+                    <div class="use-case-number">02</div>
+                    <h3>Wildfire Preparedness Planning</h3>
+                    <p>Anticipate wildfire risk windows with weather-driven early warning signals. Adjust crew readiness, pre-position equipment, and communicate with emergency services based on regional risk forecasts.</p>
+                </div>
+                <div class="use-case">
+                    <div class="use-case-number">03</div>
+                    <h3>Asset Risk Screening</h3>
+                    <p>Assess exposure of substations, transmission lines, and distribution feeders to weather-related stressors. Support investment planning and protection system design with risk-informed data.</p>
+                </div>
+                <div class="use-case">
+                    <div class="use-case-number">04</div>
+                    <h3>Post-Event Impact Triage</h3>
+                    <p>After storms or wildfire events, rapidly identify which network segments are most likely damaged or at risk. Accelerate damage assessment and restoration prioritization.</p>
+                </div>
+                <div class="use-case">
+                    <div class="use-case-number">05</div>
+                    <h3>Internal Risk Reporting</h3>
+                    <p>Provide transparent, data-backed risk assessments to internal risk management, compliance, and executive teams. Support regulatory reporting and stakeholder communication.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Process</div>
+                <h2>How Purple Resilience works</h2>
+                <p class="section-description">A streamlined approach from data to decision-ready risk intelligence.</p>
+            </div>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Data Integration</h3>
+                    <p>We combine meteorological observations, climate projections, vegetation data, terrain information, and your asset inventory to build a comprehensive environmental and infrastructure context.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Risk Modeling</h3>
+                    <p>Physics-informed models and machine learning techniques translate environmental signals into granular risk indices tailored to your network's exposure and operational characteristics.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Operational Outputs</h3>
+                    <p>Risk intelligence is delivered as maps, alerts, prioritized work lists, and API endpoints that integrate into your existing asset management, GIS, and dispatch systems.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="why-purple-resilience">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Differentiation</div>
+                <h2>Why Purple Resilience</h2>
+            </div>
+            <div class="diff-list">
+                <div class="diff-item">
+                    <div class="diff-icon">🎯</div>
+                    <div class="diff-content">
+                        <h4>Infrastructure-First Focus</h4>
+                        <p>Built specifically for critical infrastructure operators—not a generic weather or climate tool. We understand network operations, asset management workflows, and regulatory requirements.</p>
+                    </div>
+                </div>
+                <div class="diff-item">
+                    <div class="diff-icon">⚙️</div>
+                    <div class="diff-content">
+                        <h4>Actionable, Not Abstract</h4>
+                        <p>Risk intelligence designed for operational decisions, not academic reports. Outputs integrate directly into your workflows, systems, and decision timelines.</p>
+                    </div>
+                </div>
+                <div class="diff-item">
+                    <div class="diff-icon">🇪🇺</div>
+                    <div class="diff-content">
+                        <h4>European Context</h4>
+                        <p>Developed with European grid operators in mind—familiar with regulatory frameworks, climate patterns, vegetation types, and infrastructure standards across the continent.</p>
+                    </div>
+                </div>
+                <div class="diff-item">
+                    <div class="diff-icon">🔗</div>
+                    <div class="diff-content">
+                        <h4>Integration Mindset</h4>
+                        <p>Designed to complement your existing tools and systems. We provide data and intelligence that enhances your GIS, asset management, and SCADA platforms rather than replacing them.</p>
+                    </div>
+                </div>
+                <div class="diff-item">
+                    <div class="diff-icon">🤝</div>
+                    <div class="diff-content">
+                        <h4>Partnership Approach</h4>
+                        <p>As an early-stage company, we work closely with design partners to refine our models and outputs based on real operational needs and feedback.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Purple Resilience</div>
+                <div class="footer-links">
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="imprint.html">Imprint</a>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                © 2025 Purple Resilience. Currently in formation. Berlin, Germany.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
