@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About – Purple Resilience</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --color-primary: #5B3A8C;
+            --color-primary-light: #7254A3;
+            --color-secondary: #2DBDB6;
+            --color-accent: #8B5CC2;
+            --color-background: #fafaf8;
+            --color-surface: #ffffff;
+            --color-text: #1a1a1a;
+            --color-text-muted: #5a5a5a;
+            --color-border: #e0e0dc;
+            --spacing-unit: 8px;
+            --max-width: 1120px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'IBM Plex Sans', -apple-system, system-ui, sans-serif;
+            font-size: 17px;
+            line-height: 1.6;
+            color: var(--color-text);
+            background: var(--color-background);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 calc(var(--spacing-unit) * 3);
+        }
+
+        header {
+            background: var(--color-surface);
+            border-bottom: 1px solid var(--color-border);
+            padding: calc(var(--spacing-unit) * 2.5) 0;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: calc(var(--spacing-unit) * 1.5);
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        .logo:hover {
+            opacity: 0.85;
+        }
+
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+        }
+
+        .logo-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+            line-height: 1;
+        }
+
+        .logo-purple {
+            color: #8B5CC2;
+        }
+
+        .logo-resilience {
+            color: #2DBDB6;
+        }
+
+        nav a {
+            color: var(--color-text);
+            text-decoration: none;
+            margin-left: calc(var(--spacing-unit) * 4);
+            font-size: 15px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: var(--color-primary);
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: calc(var(--spacing-unit) * 10) calc(var(--spacing-unit) * 3);
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: 600;
+            line-height: 1.2;
+            color: var(--color-text);
+            margin-bottom: calc(var(--spacing-unit) * 3);
+            letter-spacing: -0.02em;
+        }
+
+        .intro {
+            font-size: 20px;
+            line-height: 1.6;
+            color: var(--color-text-muted);
+            margin-bottom: calc(var(--spacing-unit) * 6);
+        }
+
+        h2 {
+            font-size: 32px;
+            font-weight: 600;
+            line-height: 1.3;
+            color: var(--color-text);
+            margin-top: calc(var(--spacing-unit) * 8);
+            margin-bottom: calc(var(--spacing-unit) * 3);
+        }
+
+        p {
+            margin-bottom: calc(var(--spacing-unit) * 3);
+            line-height: 1.7;
+            font-size: 18px;
+        }
+
+        .status-box {
+            background: rgba(91, 58, 140, 0.05);
+            border: 1px solid rgba(91, 58, 140, 0.15);
+            border-radius: 12px;
+            padding: calc(var(--spacing-unit) * 4);
+            margin: calc(var(--spacing-unit) * 6) 0;
+        }
+
+        .status-box h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--color-primary);
+            margin-bottom: calc(var(--spacing-unit) * 2);
+        }
+
+        .status-box p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: calc(var(--spacing-unit) * 2);
+        }
+
+        .status-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .founders {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: calc(var(--spacing-unit) * 4);
+            margin-top: calc(var(--spacing-unit) * 6);
+        }
+
+        .founder {
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: 12px;
+            padding: calc(var(--spacing-unit) * 4);
+        }
+
+        .founder h3 {
+            font-size: 22px;
+            font-weight: 600;
+            color: var(--color-text);
+            margin-bottom: calc(var(--spacing-unit) * 1);
+        }
+
+        .founder .title {
+            font-size: 15px;
+            color: var(--color-secondary);
+            font-weight: 500;
+            margin-bottom: calc(var(--spacing-unit) * 2);
+        }
+
+        .founder p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--color-text-muted);
+        }
+
+        .cta-box {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+            border-radius: 12px;
+            padding: calc(var(--spacing-unit) * 6);
+            margin: calc(var(--spacing-unit) * 8) 0;
+            text-align: center;
+            color: white;
+        }
+
+        .cta-box h2 {
+            color: white;
+            margin-top: 0;
+            margin-bottom: calc(var(--spacing-unit) * 2);
+        }
+
+        .cta-box p {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: calc(var(--spacing-unit) * 4);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: calc(var(--spacing-unit) * 2) calc(var(--spacing-unit) * 4);
+            font-size: 16px;
+            font-weight: 500;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.2s;
+            background: white;
+            color: var(--color-primary);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            background: var(--color-surface);
+            border-top: 1px solid var(--color-border);
+            padding: calc(var(--spacing-unit) * 6) 0;
+            margin-top: calc(var(--spacing-unit) * 10);
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: calc(var(--spacing-unit) * 3);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: calc(var(--spacing-unit) * 1.5);
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        .logo:hover {
+            opacity: 0.85;
+        }
+
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+        }
+
+        .logo-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+            line-height: 1;
+        }
+
+        .logo-purple {
+            color: #8B5CC2;
+        }
+
+        .logo-resilience {
+            color: #2DBDB6;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: calc(var(--spacing-unit) * 4);
+        }
+
+        .footer-links a {
+            color: var(--color-text-muted);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--color-primary);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 36px;
+            }
+
+            h2 {
+                font-size: 28px;
+            }
+
+            nav {
+                display: none;
+            }
+
+            .founders {
+                grid-template-columns: 1fr;
+            }
+
+            main {
+                padding: calc(var(--spacing-unit) * 6) calc(var(--spacing-unit) * 3);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <img src="logo.png" alt="Purple Resilience Logo" class="logo-icon">
+                    <span class="logo-text">
+                        <span class="logo-purple">Purple</span>
+                        <span class="logo-resilience">Resilience</span>
+                    </span>
+                </a>
+                <nav>
+                    <a href="index.html#solution">Solution</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <h1>About Purple Resilience</h1>
+        
+        <p class="intro">We're building climate risk intelligence tools for critical infrastructure operators who need actionable insights, not academic reports.</p>
+
+        <p>Purple Resilience was founded to address a growing challenge in critical infrastructure: the need for actionable, operationally relevant risk intelligence in the face of increasing weather volatility and climate-driven operational risk.</p>
+
+        <p>Grid operators face an increasingly complex operational environment. Extreme weather events are more frequent, vegetation management resources are constrained, and regulatory pressure for resilience planning is intensifying. Yet many existing tools provide climate projections or weather data without translating these signals into operational decisions.</p>
+
+        <p>We believe infrastructure operators deserve better. Our focus is on translating environmental signals into granular, asset-level risk intelligence that integrates directly into operational workflows—prioritizing inspections, guiding vegetation management, enabling proactive preparedness, and supporting investment decisions.</p>
+
+        <h2>Our Approach</h2>
+
+        <p>We combine expertise in atmospheric science, geospatial data analysis, machine learning, and energy infrastructure operations. Our models are informed by physics, calibrated with real-world data, and designed to produce outputs that operators can use immediately.</p>
+
+        <p>We're building Purple Resilience specifically for the European grid operator community, starting with design partnerships that help us refine our models and deliver intelligence that operators actually need.</p>
+
+        <div class="status-box">
+            <h3>Current Status</h3>
+            <p><strong>Formation Stage:</strong> Purple Resilience is currently in formation and actively recruiting design partners and pilot customers.</p>
+            <p><strong>Location:</strong> Based in Berlin, Germany</p>
+            <p><strong>Stage:</strong> Early-stage, seeking pilot projects with TSOs, DSOs, and utilities across Europe</p>
+        </div>
+
+        <h2>Meet the Founders</h2>
+
+        <div class="founders">
+            <div class="founder">
+                <h3>Dr. Dipl.-Ing. Jan Eichstädt</h3>
+                <p class="title">Co-Founder</p>
+                <p>Jan brings deep expertise in atmospheric science, climate modeling, and geospatial data analysis. His background in engineering and environmental systems informs Purple Resilience's technical approach to translating climate signals into operational intelligence.</p>
+            </div>
+
+            <div class="founder">
+                <h3>Dipl. Wi-Ing. Tobias Reuss</h3>
+                <p class="title">Co-Founder</p>
+                <p>Tobias combines a background in industrial engineering with expertise in machine learning and energy systems. He focuses on product development, customer partnerships, and ensuring Purple Resilience delivers actionable outputs that integrate into real operational workflows.</p>
+            </div>
+        </div>
+
+        <div class="cta-box">
+            <h2>Interested in working with us?</h2>
+            <p>We're actively seeking design partners for pilot projects. If you're a grid operator, utility, or infrastructure organization, we'd like to hear from you.</p>
+            <a href="contact.html" class="btn">Get in Touch</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="logo.png" alt="Purple Resilience" class="footer-logo-icon">
+                    <span class="footer-logo-text">
+                        <span class="footer-logo-purple">Purple</span>
+                        <span class="footer-logo-resilience">Resilience</span>
+                    </span>
+                </div>
+                <div class="footer-links">
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="imprint.html">Imprint</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -7,7 +7,7 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
     
     <style>
         :root {
@@ -58,36 +58,12 @@
         }
 
         .logo {
-            display: flex;
-            align-items: center;
-            gap: calc(var(--spacing-unit) * 1.5);
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 20px;
+            font-weight: 500;
+            color: var(--color-primary);
             text-decoration: none;
-            transition: opacity 0.2s;
-        }
-
-        .logo:hover {
-            opacity: 0.85;
-        }
-
-        .logo-icon {
-            width: 36px;
-            height: 36px;
-        }
-
-        .logo-text {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 22px;
-            font-weight: 700;
-            letter-spacing: -0.01em;
-            line-height: 1;
-        }
-
-        .logo-purple {
-            color: #8B5CC2;
-        }
-
-        .logo-resilience {
-            color: #2DBDB6;
+            letter-spacing: -0.02em;
         }
 
         nav a {
@@ -222,37 +198,11 @@
             gap: calc(var(--spacing-unit) * 3);
         }
 
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: calc(var(--spacing-unit) * 1.5);
-            text-decoration: none;
-            transition: opacity 0.2s;
-        }
-
-        .logo:hover {
-            opacity: 0.85;
-        }
-
-        .logo-icon {
-            width: 36px;
-            height: 36px;
-        }
-
-        .logo-text {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 22px;
-            font-weight: 700;
-            letter-spacing: -0.01em;
-            line-height: 1;
-        }
-
-        .logo-purple {
-            color: #8B5CC2;
-        }
-
-        .logo-resilience {
-            color: #2DBDB6;
+        .footer-logo {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 18px;
+            font-weight: 500;
+            color: var(--color-primary);
         }
 
         .footer-links {
@@ -290,13 +240,7 @@
     <header>
         <div class="container">
             <div class="header-content">
-                <a href="index.html" class="logo">
-                    <img src="logo.png" alt="Purple Resilience Logo" class="logo-icon">
-                    <span class="logo-text">
-                        <span class="logo-purple">Purple</span>
-                        <span class="logo-resilience">Resilience</span>
-                    </span>
-                </a>
+                <a href="index.html" class="logo">Purple Resilience</a>
                 <nav>
                     <a href="index.html">Home</a>
                     <a href="contact.html">Contact</a>
@@ -403,13 +347,7 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="logo.png" alt="Purple Resilience" class="footer-logo-icon">
-                    <span class="footer-logo-text">
-                        <span class="footer-logo-purple">Purple</span>
-                        <span class="footer-logo-resilience">Resilience</span>
-                    </span>
-                </div>
+                <div class="footer-logo">Purple Resilience</div>
                 <div class="footer-links">
                     <a href="index.html">Home</a>
                     <a href="privacy.html">Privacy Policy</a>
